@@ -1,0 +1,37 @@
+body {
+    background-image: url("https://i.stack.imgur.com/jGlzr.png");
+  }
+
+#carousel {
+    width: 68rem;
+    height: 40rem;
+    background-image: url(https://thumbs.gfycat.com/AgilePeacefulAegeancat-max-1mb.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+}
+
+button {
+    margin: .5rem;
+}
+
+.inner {
+    display: table;
+    margin: 0 auto;
+    border: 1px solid black;
+    /* position: relative; */
+    /* top: 50%; */
+    margin-top: 55px;
+  }
+  
+.outer {
+    /* border: 1px solid red; */
+    height: 100%;
+    width:100%;
+    /* vertical-align: middle; */
+  }
