@@ -1,3 +1,4 @@
+// import confetti from "";
 const url1 = `https://deishacks-image-production.up.railway.app`;
 const url2 = `https://deishacks-image-production.up.railway.app/mobile`;
 
@@ -60,3 +61,12 @@ setInterval(() => {
 }
 , 7500)
 
+
+
+// import {confetti} from "https://cdn.skypack.dev/canvas-confetti";
+
+// confetti();
+
+// carousel.addEventListener("click", () => {
+//   confetti();
+// });
