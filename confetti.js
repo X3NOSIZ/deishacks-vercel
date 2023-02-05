@@ -1,6 +1,6 @@
 var amount = 60,
     between = (min, max) => min + Math.random() * (max - min),
-    colors = ['#275EFE', '#5C86FF', '#362A89', '#6D58FF', '#F04949', '#16BF78'],
+    colors = ['#275EFE', '#5C86FF', '#362A89', '#6D58FF', '#F04949', '#16BF78', '#FAC166', '#FFA44A'], 
     current = 0;
 
 let interval = setInterval(() => {
