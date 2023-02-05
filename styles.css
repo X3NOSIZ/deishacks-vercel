@@ -3,8 +3,10 @@ body {
   }
 
 #carousel {
-    width: 68rem;
-    height: 40rem;
+    /* width: 68rem;
+    height: 40rem; */
+    width: 70%;
+    height: 85%;
     background-image: url(https://thumbs.gfycat.com/AgilePeacefulAegeancat-max-1mb.gif);
     background-repeat: no-repeat;
     background-size: cover;
@@ -35,3 +37,24 @@ button {
     width:100%;
     /* vertical-align: middle; */
   }
+
+/* if width is less than 800px then carouse height is 20% */
+@media screen and (max-width: 800px) {
+    #carousel {
+        height: 24%;
+        width: 87%;
+    }
+}
+
+
+.confetti {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  z-index: 11;
+  background: var(--color);
+  top: 0;
+  left: 0;
+  will-change: transform;
+  pointer-events: none;
+}
