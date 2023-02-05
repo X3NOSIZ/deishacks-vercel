@@ -62,11 +62,28 @@ setInterval(() => {
 , 7500)
 
 
+// using toastify display a toast message everytime the website is loaded with the user's location
 
-// import {confetti} from "https://cdn.skypack.dev/canvas-confetti";
+const toast = async () => {
+    try {
+        let result = await fetch('https://ipinfo.io/json');
+        let data = await result.json();
+        console.log(data);
+        Toastify({
+            text: `Hello from ${data.region}, ${data.country}` +' '+'👋🏻',
+            duration: 3000,
+            destination: "  ",
+            newWindow: true,
+            close: true,
+            gravity: "top", // `top` or `bottom`
+            position: 'right', // `left`, `center` or `right`
+            backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            onClick: function(){} // Callback after click
+        }).showToast();
+    } catch (error) {
+        console.log(error);
+    }
+}
 
-// confetti();
-
-// carousel.addEventListener("click", () => {
-//   confetti();
-// });
+toast();
