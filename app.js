@@ -1,4 +1,9 @@
-const url = `https://deishacks-image-production.up.railway.app`;
+const url1 = `https://deishacks-image-production.up.railway.app`;
+const url2 = `https://deishacks-image-production.up.railway.app/mobile`;
+
+// detect if the user is on a mobile device
+// if the user is on a mobile device, use url2 else use url1
+const url = window.innerWidth <= 800 ? url2 : url1;
 
 const carousel = document.getElementById('carousel');
 
@@ -30,25 +35,6 @@ getTwoPhotos().then(photosList => {
 const prevBtn = document.getElementById('previous');
 const nextBtn = document.getElementById('next');
 
-// prevBtn.addEventListener('click', ()=> {
-//     if(index === 0) {
-//         index = photos.length - 1;
-//         carousel.style.backgroundImage = `url(${photos[index]})`
-//     } else {
-//         index--;
-//         carousel.style.backgroundImage = `url(${photos[index]})`
-//     }
-// })
-
-// nextBtn.addEventListener('click', ()=> {
-//     if(index === photos.length - 1) {
-//         index = 0;
-//         carousel.style.backgroundImage = `url(${photos[index]})`;
-//     } else {
-//         index++;
-//         carousel.style.backgroundImage = `url(${photos[index]})`;
-//     }
-// })
 
 // click on the image to go to the next image
 carousel.addEventListener('click', ()=> {
@@ -72,5 +58,5 @@ setInterval(() => {
         carousel.style.backgroundImage = `url(${photos[index]})`;
     }
 }
-, 5000)
+, 7500)
 
